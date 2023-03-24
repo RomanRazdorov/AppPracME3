@@ -77,6 +77,13 @@ public class FirstFragment extends Fragment {
     }
 
     @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        Log.i(TAG, "onViewStateRestored");
+        Toast.makeText(getContext(), "onViewStateRestored", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         Log.i(TAG, "Attached");
@@ -132,6 +139,13 @@ public class FirstFragment extends Fragment {
         super.onStop();
         Log.i(TAG, "Stopped");
         Toast.makeText(getContext(), "Stopped", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(TAG, "onSaveInstanceState");
+        Toast.makeText(getContext(), "onSaveInstanceState", Toast.LENGTH_SHORT).show();
     }
 
     @Override
