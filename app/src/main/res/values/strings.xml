@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">AppPracME3</string>
+    <string name="app_name">AppPracME2</string>
+    <string name="nickname">Nickname</string>
+    <string name="fname">Name</string>
+    <string name="sname">Surname</string>
+    <string name="email">example@gmail.com</string>
+    <string name="title">Join Us Now!</string>
+    <string name="passwd1">Input your password here</string>
+    <string name="passwd2">Repeat your password</string>
+    <string name="btnReg">Reg In!</string>
+    <string name="btnLog">Log In!</string>
+    <string name="logNow">Already Have Account?</string>
+    <string name="recievermessage">Reciever Activity</string>
+    <string name="gigachadcat">Giga Chad Cat Supreme</string>
+    <string name="redalert">Soviet Power Supreme!</string>
+    <string name="cherdenkosurprise">Cherdenko Surprise! :D</string>
+    <string name="btnReciever">Confirm Data Arrive!</string>
+    <string name="regscreen">Go</string>
+    <string name="media_title_hint">Заголовок</string>
+    <string name="media_description_text">Описание</string>
+    <string name="add_button_text">Добавить</string>
+    <string name="media_image_description">Image description</string>
 </resources>
