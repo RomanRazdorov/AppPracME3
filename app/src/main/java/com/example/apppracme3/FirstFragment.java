@@ -49,6 +49,13 @@ public class FirstFragment extends Fragment {
         sname = (EditText) view.findViewById(R.id.surname);
         email = (EditText) view.findViewById(R.id.email);
 
+        if(getArguments() != null){
+            Bundle dataFromSecond = getArguments();
+            nickname.setText(dataFromSecond.get("Nickname").toString());
+            fname.setText(dataFromSecond.get("FName").toString());
+            sname.setText(dataFromSecond.get("SName").toString());
+            email.setText(dataFromSecond.get("Email").toString());
+        }
 
         TextView loadTitle = (TextView) view.findViewById(R.id.regscrn);
         loadTitle.setText(R.string.title);

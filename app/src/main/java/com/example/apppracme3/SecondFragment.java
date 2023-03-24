@@ -49,10 +49,28 @@ public class SecondFragment extends Fragment {
         Surnames = (TextView) view.findViewById(R.id.getSurname);
         Emails = (TextView) view.findViewById(R.id.getEmail);
 
-
+        if (getArguments() != null) {
+            Bundle bundle = getArguments();
+            Nick.setText(bundle.get("Nickname").toString());
+            Names.setText(bundle.get("FName").toString());
+            Surnames.setText(bundle.get("SName").toString());
+            Emails.setText(bundle.get("Email").toString());
+            Log.i(TAG, "Data Received");
+        }
         Button logButton = view.findViewById(R.id.btnReciever);
         logButton.setOnClickListener(view1 -> {
-
+            Bundle backTransferData = new Bundle();
+            backTransferData.putString("Nickname", Nick.getText().toString());
+            backTransferData.putString("FName", Names.getText().toString());
+            backTransferData.putString("SName", Surnames.getText().toString());
+            backTransferData.putString("Email", Emails.getText().toString());
+            FirstFragment firstFragment = (FirstFragment) requireActivity().getSupportFragmentManager().findFragmentByTag(FirstFragment.TAG);
+            if (firstFragment != null) {
+                firstFragment.setArguments(backTransferData);
+                requireActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container_view, firstFragment)
+                        .addToBackStack(TAG).commit();
+            }
 
 
         });
