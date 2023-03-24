@@ -36,7 +36,8 @@ public class SecondFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
+        Log.i(TAG, "onCreateView");
+        Toast.makeText(getContext(), "onCreateView", Toast.LENGTH_SHORT).show();
         return inflater.inflate(R.layout.activity_data_reciever_fragment, container, false);
     }
 
@@ -51,7 +52,8 @@ public class SecondFragment extends Fragment {
 
         Button logButton = view.findViewById(R.id.btnReciever);
         logButton.setOnClickListener(view1 -> {
-            //empty logic
+
+
 
         });
 
@@ -60,43 +62,50 @@ public class SecondFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Log.i(TAG, "Created");
+        Toast.makeText(getContext(), "Created", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onStart() {
         super.onStart();
-
+        Log.i(TAG, "Started");
+        Toast.makeText(getContext(), "Started", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onPause() {
         super.onPause();
-
+        Log.i(TAG, "Paused");
+        Toast.makeText(getContext(), "Paused", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-
+        Log.i(TAG, "onAttach");
+        Toast.makeText(getContext(), "onAttach", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-
+        Log.i(TAG, "onDetach");
+        Toast.makeText(getContext(), "onDetach", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-
+        Log.i(TAG, "Stopped");
+        Toast.makeText(getContext(), "Stopped", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-
+        Log.i(TAG, "Destroyed");
+        Toast.makeText(getContext(), "Destroyed", Toast.LENGTH_SHORT).show();
     }
 
 

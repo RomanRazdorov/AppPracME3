@@ -3,8 +3,11 @@ package com.example.apppracme3;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    final public static String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,5 +18,7 @@ public class MainActivity extends AppCompatActivity {
                     .add(R.id.fragment_container_view, new FirstFragment(), FirstFragment.class.getSimpleName())
                     .commit();
         }
+        Log.i(TAG, "Created");
+        Toast.makeText(this, "Created", Toast.LENGTH_SHORT).show();
     }
 }
