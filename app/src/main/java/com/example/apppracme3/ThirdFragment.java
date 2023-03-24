@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 
 public class ThirdFragment extends Fragment {
     final private static String TAG = ThirdFragment.class.getSimpleName();
+
     public ThirdFragment(){
     }
 

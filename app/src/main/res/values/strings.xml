@@ -20,4 +20,7 @@
     <string name="media_description_text">Описание</string>
     <string name="add_button_text">Добавить</string>
     <string name="media_image_description">Image description</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

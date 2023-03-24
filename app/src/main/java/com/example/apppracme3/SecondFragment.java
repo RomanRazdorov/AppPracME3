@@ -60,7 +60,7 @@ public class SecondFragment extends Fragment {
         Button logButton = view.findViewById(R.id.btnReciever);
         logButton.setOnClickListener(view1 -> {
             Bundle backTransferData = new Bundle();
-            backTransferData.putString("Nickname", Nick.getText().toString());
+            backTransferData.putString("Nickname", Nick.getText().toString() + "Backbu");
             backTransferData.putString("FName", Names.getText().toString());
             backTransferData.putString("SName", Surnames.getText().toString());
             backTransferData.putString("Email", Emails.getText().toString());
